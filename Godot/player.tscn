@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://uky3mc0h0wk4"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_ysa2b"]
+[ext_resource type="Texture2D" uid="uid://drbhjnety4dp2" path="res://MiniWorldSprites/Characters/Soldiers/Melee/SwordsmanTemplate.png" id="2_x8jn7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82mmi"]
+size = Vector2(9.5, 11.5)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ysa2b")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_x8jn7")
+hframes = 5
+vframes = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_82mmi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
